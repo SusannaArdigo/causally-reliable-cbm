@@ -1,0 +1,48 @@
+# Translated from environment.yml. Use the existing Python 3.12 virtual environment.
+# Conda channels, Python, pip, and the Conda-only pytorch-cuda package are omitted.
+# CUDA installation on Linux depends on the PyTorch build selected separately.
+# Graph rendering also requires the Graphviz executable: brew install graphviz (macOS).
+torch>=2.1
+torchvision>=0.17.1
+networkx
+lightning
+cdt
+fpdf2
+requests
+python-dotenv
+hydra-core==1.3.*
+numpy
+pandas
+tqdm
+scipy
+scikit-learn
+seaborn
+openpyxl
+huggingface_hub
+transformers
+# Imported by src/completion/concepts_retrieval.py; missing from environment.yml.
+sentence-transformers
+torch-geometric
+# Optional PyG extensions from environment.yml; not directly used by this repository.
+# Install separately if needed, matching the PyTorch version and platform.
+# torch-scatter
+# torch-sparse
+wandb
+plotly
+kaleido
+gdown
+causal-learn
+langchain_community
+langchain
+langchain_core
+langchain_huggingface
+accelerate>=0.26.0
+bnlearn
+nltk
+mistralai
+openai
+beautifulsoup4
+lxml
+duckduckgo_search
+hydra-list-sweeper
+pytorch-minimize

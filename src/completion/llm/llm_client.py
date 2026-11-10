@@ -1,4 +1,7 @@
-from mistralai import Mistral
+try:
+    from mistralai import Mistral
+except ImportError:
+    from mistralai.client import Mistral
 import openai
 import os
 from env import OPENAI_API_KEY

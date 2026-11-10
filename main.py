@@ -134,7 +134,8 @@ def main(cfg: DictConfig) -> None:
         if cfg.dataset.loader.ftune_size > 0: 
             trainer, engine = finetune_model(cfg, engine, dataset)
         # ----- test
-        trainer.test(engine, test_dataloader, ckpt_path='best')
+        # This checkpoint was created by trainer.fit above and contains OmegaConf objects.
+        trainer.test(engine, test_dataloader, ckpt_path='best', weights_only=False)
         trainer.logger.finalize("success")
     finally:
         if isinstance(trainer.logger, WandbLogger):
